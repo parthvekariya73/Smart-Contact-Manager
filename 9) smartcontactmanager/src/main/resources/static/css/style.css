@@ -1,0 +1,108 @@
+body {
+	background: #e2e2e2 !important; 
+}
+
+.bg-primary{
+	background: #009688 !important;
+}
+
+.banner{
+	width:100%;
+	height:93vh;
+	background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)) ,url(../image/homeimg.jpg);
+	background-size:cover;
+	color:white;
+}
+
+.mycard{
+	padding:20px;
+	background: #FFFFFF;
+}
+
+#loginform{
+	height: 380px;
+	max-width: 600px;
+}
+
+
+/* Sidebar style */
+
+@media only screen and (max-width: 600px) {
+    .sidebar {
+        max-width: 80%; /* Sidebar will take up 80% of the screen width */
+        height: 100vh;
+        background: white;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1000;
+        padding-top: 20px;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(-100%); /* Move sidebar out of view by default */
+    }
+    .sidebar.visible {
+    	max-width: 70%;
+        transform: translateX(0); /* Slide sidebar in from the left */
+    }
+
+    .content {
+        margin-left: 0 !important; /* Content takes full width on mobile */
+    }
+}
+
+.sidebar{
+	width: 18%;
+	background: white;
+	height: 100%;
+	position: fixed;
+	padding-top: 45px;	
+}
+
+.sidebar a{
+	display:block;
+	width:100%;
+	padding: 10px 25px;
+	text-decoration: none;
+	color:grey;
+    transition: margin-left 0.3s ease-in-out;
+}
+.sidebar.visible {
+    display: block;
+}
+.sidebar.hidden {
+    margin-left: -20%; /* Sidebar will be hidden off-screen */
+}
+.sidebar a:hover{
+	background: #e2e2e2;
+}
+.toggle{
+	cursor: pointer;
+	font-size: 24px;
+}
+.sidebar .divider{
+	height:.5px;
+	width: 100%;
+	background: #e2e2e2;
+	margin-top: 10px;
+}
+
+.content{
+	margin-left: 20%;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.sidebar .crossbtn{
+	position: absolute;
+	top: 0;
+	right: 35px;
+	font-size: 36px;
+	cursor: pointer;
+}
+
+.profile_img{
+	width: 35px;
+	height: 35px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 1px soild black;
+}

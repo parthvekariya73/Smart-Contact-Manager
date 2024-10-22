@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8" />
+<title></title>
+</head>
+<body>
+
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+					<div class="mycard mt-4 mb-4">
+						<form class="form" th:action="@{/dologin}" action="#" method="post"
+							id="loginform">
+							<h1 class="text-center">Login</h1>
+							<!-- alert -->
+							<div th:if="${param.error}" class="alert alert-danger">
+								Invalid UserName and Password <span th:text="${param.error}"></span>
+							</div>
+
+							<div th:if="${param.logout}" class="alert alert-success">
+								you have been logged out</div>
+
+							<div class="form-group mt-4">
+								<label for="exampleInputEmail1">Email address</label> <input
+									type="email" class="form-control" id="exampleInputEmail1"
+									aria-describedby="emailHelp" name="username"
+									placeholder="Enter email">
+							</div>
+
+							<div class="form-group mt-3">
+								<label for="exampleInputPassword1">Password</label> <input
+									type="password" class="form-control" name="password"
+									id="exampleInputPassword1" placeholder="Password">
+							</div>
+							<div class="text-right ms-auto">
+								<a href="/signup" class="text-info">Register here</a>
+							</div>
+							<button type="submit" class="btn btn-primary mt-3">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>
